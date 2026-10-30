@@ -35,12 +35,14 @@ A RatelDesk automation target is a NetRatel job definition. Its inputs become th
 
 1. In RatelDesk, open **Service Explorer** at `/admin/requests/services`, select a service and edit its request form.
 2. Select the form's organization. Add or select an **Automation** task, then choose the saved **Automation system connection** for that organization.
-3. Use **Browse Library** to select a reviewed job in the mapped NetRatel tenant. To create one, choose **Create External orchestration Target**, enter its name, folder and an actual enrolled **Client Identity**. A new target has no executable steps: open it in NetRatel **Jobs** and complete those steps before testing.
+3. Use **Browse Library** to select a reviewed job in the mapped NetRatel tenant. To create one, choose **Create External orchestration Target**, enter its name, folder and an actual enrolled **Client Identity**. A new target has no executable steps or input parameters: open it in NetRatel **Jobs** and configure both, then reopen the RatelDesk form to reload the catalog before mapping inputs.
 4. Under **Payload Mapping**, map each **Helpdesk Field** to its **Job Param**. Keep **Binding Enabled** selected and save the form.
 5. Check the save result. Saving also attempts to synchronize mapped input definitions with NetRatel. A form can save while input synchronization fails; resolve the connection error and save again before running it.
 6. Submit a test request and follow its NetRatel request and job run to completion. Check both the parameter values and the resulting task status before making the form available to users.
 
 When job inputs change in NetRatel, reopen the binding and use **Refresh**, then **Drift** to review the differences. **Mark Import** and **Import** bring the reviewed input changes into the form. Review shared job parameters before saving form-side changes: input synchronization replaces the job's input definitions.
+
+See RatelDesk's [job-binding guide](https://rateldesk.hello43031.chatgpt.site/docs/automation/job-bindings/) for the complete field-mapping workflow and its [NetRatel pairing guide](https://rateldesk.hello43031.chatgpt.site/docs/automation/netratel-pairing/) for the helpdesk side of connection setup.
 
 ## Maintain the mapping
 
