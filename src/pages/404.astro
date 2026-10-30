@@ -1,0 +1,6 @@
+---
+import Marketing from '../layouts/Marketing.astro';
+import Icon from '../components/Icon.astro';
+---
+<Marketing title="Page not found — NetRatel"><section class="container not-found"><p class="eyebrow">404 / Page not found</p><h1>That path ends here.</h1><p>The page may have moved. Search the documentation or start from the docs home.</p><div class="hero-ctas"><a href="/docs/" class="button">Browse documentation <Icon name="arrow" size={16}/></a><button class="button button-secondary" data-open-search><Icon name="search" size={16}/>Search docs</button></div></section></Marketing>
+<style>.not-found{padding:100px 0 130px;min-height:55vh}.not-found h1{font:500 clamp(35px,5vw,60px) var(--display);letter-spacing:-.05em;margin:0 0 22px}.not-found p:not(.eyebrow){max-width:450px;color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:30px}</style>

@@ -1,0 +1,35 @@
+---
+import Icon from './Icon.astro';
+---
+<div class="hero-visual">
+ <div class="console">
+  <div class="console-top"><div class="window-dots"><i></i><i></i><i></i></div><span class="console-title">netratel / operations</span><span class="console-label">Example workspace</span></div>
+  <div class="console-tabs" role="tablist" aria-label="Example product workflows">
+   <button type="button" role="tab" id="preview-tab-fleet" aria-controls="preview-fleet" aria-selected="true" data-preview="fleet"><Icon name="server" size={13}/>Fleet</button>
+   <button type="button" role="tab" id="preview-tab-jobs" aria-controls="preview-jobs" aria-selected="false" data-preview="jobs" tabindex="-1"><Icon name="layers" size={13}/>Jobs</button>
+   <button type="button" role="tab" id="preview-tab-ai" aria-controls="preview-ai" aria-selected="false" data-preview="ai" tabindex="-1"><Icon name="spark" size={13}/>AI Ops</button>
+  </div>
+  <div id="preview-fleet" class="console-pane" role="tabpanel" aria-labelledby="preview-tab-fleet" tabindex="0">
+   <div class="console-heading"><h3>One place. Your entire fleet.</h3><span>Demo tenant / Production</span></div>
+   <div class="console-metrics"><div class="console-metric"><p>Connected clients</p><strong>24 <small>↗ online</small></strong></div><div class="console-metric"><p>Active alerts</p><strong>02 <i class="metric-dot"></i></strong></div><div class="console-metric"><p>Completed jobs</p><strong>18 <small>today</small></strong></div></div>
+   <table class="console-table"><thead><tr><th>Client</th><th>Platform</th><th>Status</th><th>Health</th></tr></thead><tbody><tr><td>web-01</td><td>Linux x64</td><td><span class="status-pill">Connected</span></td><td>Healthy</td></tr><tr><td>workstation-08</td><td>Windows x64</td><td><span class="status-pill">Connected</span></td><td>Healthy</td></tr><tr><td>db-02</td><td>Linux x64</td><td><span class="status-pill">Connected</span></td><td><span class="status-pill amber">Disk alert</span></td></tr></tbody></table>
+  </div>
+  <div id="preview-jobs" class="console-pane" role="tabpanel" aria-labelledby="preview-tab-jobs" tabindex="0" hidden>
+   <div class="console-heading"><h3>Make the routine repeatable.</h3><span>Demo run / web-01</span></div>
+   <div class="job-detail"><header>Daily service check <span class="status-pill">Completed</span></header><div class="job-steps"><div><Icon name="check" size={12}/>Collect service inventory<small>Completed</small></div><div><Icon name="check" size={12}/>Run approved health-check script<small>Completed</small></div><div><Icon name="check" size={12}/>Capture the result<small>Completed</small></div></div><div class="job-output">$ ./service-health-check.sh<br/>Services checked. Output saved with this run.</div></div>
+  </div>
+  <div id="preview-ai" class="console-pane" role="tabpanel" aria-labelledby="preview-tab-ai" tabindex="0" hidden>
+   <div class="console-heading"><h3>Your operator. Your assistant.</h3><span>Demo conversation</span></div>
+   <div class="chat-message">Help me investigate the disk alert on db-02.</div><div class="chat-message assistant"><b>Netclaw</b>I can review the alert and recent telemetry, then suggest a read-only check. Any proposed action stays within the access you have configured.<div class="chat-note">Tenant context · Scoped tools · Operator approvals</div></div>
+  </div>
+  <div class="console-bottom"><span>● Tenant-scoped access</span><span>Self-hosted. Fully yours.</span></div>
+ </div>
+ <p class="preview-caption">Illustrative workflow with sample data · <a href="/docs/guides/clients/">Explore the operator guides ↗</a></p>
+</div>
+<script>
+ const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-preview]'));
+ function activate(tab: HTMLButtonElement) {
+  for(const t of tabs) { const selected = t === tab; t.setAttribute('aria-selected', String(selected)); t.tabIndex = selected ? 0 : -1; const panel = document.getElementById(`preview-${t.dataset.preview}`); if(panel) panel.hidden = !selected; }
+ }
+ tabs.forEach((tab, i) => { tab.addEventListener('click', () => activate(tab)); tab.addEventListener('keydown', e => { if(['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) { e.preventDefault(); const index = e.key === 'Home' ? 0 : e.key === 'End' ? tabs.length-1 : (i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length; activate(tabs[index]); tabs[index].focus(); } }); });
+</script>

@@ -1,0 +1,33 @@
+---
+import Icon from './Icon.astro';
+const { docs = false } = Astro.props;
+const path = Astro.url.pathname;
+---
+<nav class:list={['site-nav', { 'docs-nav': docs }]} aria-label="Main navigation">
+  <a href="/" class="brand" aria-label="NetRatel home"><img src="/brand/netratel-wordmark-600.webp" width="600" height="200" alt="NetRatel" fetchpriority="high" /></a>
+  <div class="nav-links">
+    <a href="/#platform">Platform</a><a href="/docs/" aria-current={path.startsWith('/docs/') ? 'page' : undefined}>Documentation</a><a href="/#integrations">Integrations</a><a href="/releases/" aria-current={path.startsWith('/releases/') ? 'page' : undefined}>Releases</a>
+  </div>
+  <div class="nav-actions">
+    <slot name="search"><button type="button" class="search-trigger" data-open-search aria-label="Search documentation"><Icon name="search" size={16}/><span>Search docs</span><kbd>⌘ K</kbd></button></slot>
+    <a class="github-link" href="https://github.com/BostonTechnologies/netratel" aria-label="NetRatel on GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.12.68-3.78-1.32-3.78-1.32-.51-1.29-1.25-1.64-1.25-1.64-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.15 1.72 1.15 1 1.72 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.49-.29-5.11-1.25-5.11-5.54 0-1.22.44-2.22 1.15-3-.12-.29-.5-1.43.11-2.98 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.61 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.55.23 2.69.11 2.98.72.78 1.15 1.78 1.15 3 0 4.3-2.62 5.25-5.12 5.53.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg></a>
+    <a href="/docs/getting-started/quickstart/" class="button button-small nav-cta">Get started <Icon name="arrow" size={15}/></a>
+    <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><Icon name="menu"/></button>
+  </div>
+</nav>
+<div id="mobile-nav" class="mobile-nav" hidden><a href="/#platform">Platform</a><a href="/docs/">Documentation</a><a href="/#integrations">Integrations</a><a href="/releases/">Releases</a><a href="/docs/getting-started/quickstart/">Get started →</a></div>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.mobile-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const menu = document.getElementById('mobile-nav');
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      if (menu) menu.hidden = !open;
+    });
+  });
+  document.querySelectorAll('#mobile-nav a').forEach(link => link.addEventListener('click', () => {
+    document.getElementById('mobile-nav')?.setAttribute('hidden', '');
+    document.querySelector('.mobile-toggle')?.setAttribute('aria-expanded', 'false');
+  }));
+</script>

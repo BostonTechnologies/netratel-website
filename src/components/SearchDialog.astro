@@ -1,0 +1,42 @@
+---
+import Icon from './Icon.astro';
+---
+<dialog id="site-search" aria-labelledby="search-heading">
+  <div class="search-head"><Icon name="search"/><h2 id="search-heading" class="sr-only">Search NetRatel documentation</h2><input id="search-input" type="search" placeholder="Search the documentation…" aria-label="Search the documentation" autocomplete="off"/><button type="button" id="close-search" aria-label="Close search"><kbd>Esc</kbd></button></div>
+  <div id="search-results" aria-live="polite"><p class="search-empty">Try “Docker”, “OIDC” or “HTTP MCP”.</p></div>
+  <div class="search-foot"><span>Documentation for v0.1.2</span><span>Powered by Pagefind</span></div>
+</dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#site-search');
+  const input = document.querySelector<HTMLInputElement>('#search-input');
+  const results = document.querySelector<HTMLElement>('#search-results');
+  let pagefind: any;
+  let sequence = 0;
+  const open = () => { dialog?.showModal(); input?.focus(); };
+  document.querySelectorAll('[data-open-search]').forEach(button => button.addEventListener('click', open));
+  document.getElementById('close-search')?.addEventListener('click', () => dialog?.close());
+  dialog?.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if(event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
+  document.addEventListener('keydown', event => { if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); open(); } });
+  input?.addEventListener('input', async () => {
+    const current = ++sequence;
+    const query = input.value.trim();
+    if (!results) return;
+    if (!query) { results.innerHTML = '<p class="search-empty">Try “Docker”, “OIDC” or “HTTP MCP”.</p>'; return; }
+    results.innerHTML = '<p class="search-empty">Searching…</p>';
+    try {
+      const moduleUrl = new URL('/pagefind/pagefind.js', window.location.origin).href;
+      pagefind ||= await import(/* @vite-ignore */ moduleUrl);
+      const found = await pagefind.search(query);
+      const data = await Promise.all(found.results.slice(0, 8).map((r: any) => r.data()));
+      if(current !== sequence) return;
+      results.replaceChildren();
+      if(!data.length) { results.innerHTML = '<p class="search-empty">No matches. Try a shorter term, or browse the <a href="/docs/">documentation</a>.</p>'; return; }
+      for(const result of data) {
+        const anchor = document.createElement('a'); anchor.href = result.url; anchor.className = 'search-result';
+        const title = document.createElement('strong'); title.textContent = result.meta.title || 'Documentation';
+        const excerpt = document.createElement('p'); excerpt.innerHTML = result.excerpt;
+        anchor.append(title, excerpt); results.append(anchor);
+      }
+    } catch { results.innerHTML = '<p class="search-empty">Search is available in the published build. <a href="/docs/">Browse all documentation →</a></p>'; }
+  });
+</script>

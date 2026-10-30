@@ -1,0 +1,12 @@
+---
+import Icon from './Icon.astro';
+---
+<footer class="site-footer">
+ <div class="footer-top container">
+  <div class="footer-brand"><a href="/" aria-label="NetRatel home"><img src="/brand/netratel-wordmark-600.webp" width="600" height="200" alt="NetRatel" loading="lazy" /></a><p>Secure, connected automation.<br/>Built by Boston Technologies.</p><a href="https://bostec.co.za" class="bostec">BOSTEC <Icon name="arrowUp" size={14}/></a></div>
+  <div><h2>Product</h2><a href="/#platform">Platform</a><a href="/releases/">Releases & downloads</a><a href="https://github.com/BostonTechnologies/netratel">Source code</a></div>
+  <div><h2>Documentation</h2><a href="/docs/getting-started/quickstart/">Get started</a><a href="/docs/deployment/overview/">Deployment</a><a href="/docs/integrations/http-mcp/">HTTP MCP</a><a href="/docs/reference/cli/">CLI reference</a></div>
+  <div><h2>Connect</h2><a href="https://github.com/BostonTechnologies/netratel/issues">Issues & feedback</a><a href="https://github.com/BostonTechnologies/netratel-website">Improve these docs</a><a href="mailto:hello@bostec.co.za">Contact Boston Technologies</a></div>
+ </div>
+ <div class="footer-bottom container"><span>© {new Date().getUTCFullYear()} Boston Technologies</span><span>Self-hosted · Open source · Apache 2.0</span><a href="https://github.com/BostonTechnologies/netratel/blob/v0.1.2/LICENSE">Product licence <Icon name="arrowUp" size={13}/></a></div>
+</footer>

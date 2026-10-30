@@ -1,0 +1,9 @@
+---
+import SiteNav from '../components/SiteNav.astro';
+import Footer from '../components/Footer.astro';
+import SearchDialog from '../components/SearchDialog.astro';
+import '../styles/global.css';
+const { title = 'NetRatel — Your infrastructure. Under your control.', description = 'Manage your fleet, automate repeatable work and connect AI on your terms. NetRatel is a self-hosted, open-source automation orchestrator by Boston Technologies.' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="theme-color" content="#080c14"/><meta name="color-scheme" content="dark"/><title>{title}</title><link rel="canonical" href={canonical}/><link rel="icon" type="image/png" href="/brand/netratel-mark-32.png"/><link rel="apple-touch-icon" href="/brand/apple-touch-icon.png"/><meta property="og:type" content="website"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:image" content={new URL('/brand/netratel-social-preview.webp', Astro.site)}/><meta name="twitter:card" content="summary_large_image"/></head><body class="marketing"><a class="skip-link" href="#main">Skip to content</a><header class="marketing-header"><SiteNav/></header><main id="main"><slot/></main><Footer/><SearchDialog/></body></html>

@@ -2,6 +2,8 @@
 
 The NetRatel product home and public documentation, built with Astro and Starlight. [BostonTechnologies/netratel-website](https://github.com/BostonTechnologies/netratel-website) is the canonical source repository. The published site is managed through [ChatGPT Sites](https://chatgpt.com/space/sites).
 
+**Live website:** [netratel.hello43031.chatgpt.site](https://netratel.hello43031.chatgpt.site)
+
 Documentation targets the release recorded in [`src/version.json`](src/version.json). Change that manifest only after reviewing the corresponding product release. It records the product tag, source commit and review date independently of the website package version.
 
 ## Local development

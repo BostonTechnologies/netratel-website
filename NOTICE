@@ -1,0 +1,10 @@
+NetRatel website
+Copyright 2026 Boston Technologies
+
+Original website implementation and documentation by Boston Technologies.
+NetRatel product names, logos, mascot and other branding remain Boston
+Technologies brand assets. The Apache License does not grant trademark rights.
+
+Built with Astro and Starlight. Dependency licences are retained in the
+installed packages. Netclaw's website was an architectural and editorial
+reference; its source, prose, styles, and assets are not incorporated here.
