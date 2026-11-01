@@ -5,7 +5,7 @@ description: Choose a first task, deploy NetRatel, and connect the first compute
 
 NetRatel brings your clients, scripts, jobs and operational work into one self-hosted console. Start by deploying the server, choose how people sign in, then enroll a computer in a tenant.
 
-These guides describe **v0.1.2**. Server images, native clients and command-line tools are published together on [GitHub Releases](https://github.com/BostonTechnologies/netratel/releases/tag/v0.1.2).
+These guides describe **v0.1.3**. Server images, native clients and command-line tools are published together on [GitHub Releases](https://github.com/BostonTechnologies/netratel/releases/tag/v0.1.3).
 
 ## Choose your first task
 

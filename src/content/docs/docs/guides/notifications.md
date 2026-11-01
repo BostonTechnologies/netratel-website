@@ -35,4 +35,4 @@ Run history records the outcome for each destination. A successful action is not
 
 Notifications shown inside NetRatel and outbound channel messages have separate lifecycles. Marking an application notification as read does not resolve the underlying monitoring alert.
 
-[v0.1.2 notification reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/NOTIFICATION-CONNECTORS.md)
+[v0.1.3 notification reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/NOTIFICATION-CONNECTORS.md)

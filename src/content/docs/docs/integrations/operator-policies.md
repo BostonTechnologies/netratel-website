@@ -9,7 +9,7 @@ New HTTP credentials created through the [browser wizard](/docs/integrations/cre
 
 ## Find a policy
 
-Open **Admin → MCP Policies** at `/admin/operator-policies`. Your account needs current `mcp.policy.admin` authority. Editing also requires an independently assigned policy that permits administration of the selected environment and target.
+Open **Admin → MCP Policies** at `/admin/operator-policies`. Your account needs current `mcp.policy.admin` authority. An interactive instance administrator can manage policies without an existing delegated MCP parent policy. Scoped callers still need administration authority within their existing environment, target and operation bounds. Exact previews, confirmations and audit records apply to both paths.
 
 The default list shows active base policies, grouped by integration and tenant. Expand a base to see its child exceptions. Search by policy, principal, tenant, client, tag or operation; use **Lifecycle** to include inactive history.
 
@@ -53,4 +53,4 @@ Batch deletion previews the selected count and impact, then reports each result 
 
 For older installations, **Consolidate legacy integration policies** can group eligible rules under a base while preserving their existing bounds. It does not convert narrow rules into unrestricted access.
 
-[Policy reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/mcp-http/authentication.md#bounded-operator-policies-in-the-web-ui)
+[Policy reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/mcp-http/authentication.md#bounded-operator-policies-in-the-web-ui)

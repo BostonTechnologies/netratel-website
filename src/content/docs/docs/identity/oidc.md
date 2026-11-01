@@ -73,4 +73,4 @@ The configured operator group provides the documented administrator compatibilit
 
 Use [Hybrid sign-in](/docs/identity/hybrid/) when you also want local accounts available. Matching email addresses do not link Local and OIDC identities.
 
-[OIDC configuration reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/deployment/CONFIGURATION.md#interactive-browser-authentication)
+[OIDC configuration reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/deployment/CONFIGURATION.md#interactive-browser-authentication)

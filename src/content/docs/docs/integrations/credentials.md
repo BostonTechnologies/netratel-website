@@ -50,4 +50,4 @@ Use **Details → Refresh admission**, then run a permitted read through the act
 
 To rotate a credential, create its replacement, update the consumer, verify a permitted read, then revoke the old credential. Deleting a local profile does not revoke the server credential. An expired or revoked credential needs an intentional replacement; its secret cannot be retrieved later.
 
-[Credential setup and editing reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/mcp-http/setup.md#choose-tenant-and-server-access-yourself)
+[Credential setup and editing reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/mcp-http/setup.md#choose-tenant-and-server-access-yourself)

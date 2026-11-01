@@ -77,8 +77,8 @@ Select the intended server and tools in the audience permissions and retain the 
 
 For tenant-isolated AI Ops, use a separate Netclaw daemon and endpoint for each tenant, with its own state and only that tenant's MCP credential. Native SignalR turns currently use Netclaw's Personal audience; device names and prompts do not partition one daemon's available tools.
 
-Use one NetRatel API replica for interactive Netclaw chat in v0.1.2. Approval responses and explicit recovery need the API instance that owns the conversation transport.
+Use one NetRatel API replica for interactive Netclaw chat in v0.1.3. Approval responses and explicit recovery need the API instance that owns the conversation transport.
 
 If a turn shows **Outcome unconfirmed**, choose **Recover session** to read the saved remote history. Recovery does not resend the question. Review any pending approval and its exact proposed action before responding.
 
-[AI Ops reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/netclaw-ai-operations.md) · [Netclaw credential and isolation setup](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/netclaw-http-mcp.md)
+[AI Ops reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/netclaw-ai-operations.md) · [Netclaw credential and isolation setup](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/netclaw-http-mcp.md)

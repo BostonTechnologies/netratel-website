@@ -3,13 +3,13 @@ title: Enrol and manage clients
 description: Install a native client, confirm its connection and keep each computer identifiable.
 ---
 
-Enrol each computer into a tenant before running work on it. NetRatel v0.1.2 provides native clients for Windows x64, Linux x64 and macOS Apple Silicon.
+Enrol each computer into a tenant before running work on it. NetRatel v0.1.3 provides native clients for Windows x64, Linux x64 and macOS Apple Silicon.
 
 ## Install your first client
 
 You need an administrator account, a configured public Web URL and Gateway URL, and a verified client pack imported into your instance.
 
-1. Open **Agent Installers** at `/clients/mgmt` and select the target tenant.
+1. Open **Agent Installers & Updates** at `/clients/mgmt`, select the target tenant and open **Packages**.
 2. Select the matching operating system and approved client version.
 3. Choose **Generate script**. Review the tenant, public endpoints, expiry and permitted enrolments.
 4. Copy the generated command or download and inspect its script. Run it on the target computer, using an elevated PowerShell session for a Windows service or root for Linux/macOS service installation.
@@ -36,6 +36,6 @@ On **Clients**, choose **Edit client** to set a friendly name and tags. Use a na
 
 **Uninstall and remove** is offered only for an eligible online Windows or Linux managed installation. NetRatel waits for the native helper's removal receipt before removing the record. Use the operation's status to distinguish a pending request from a completed uninstall.
 
-Next: [read client telemetry](/docs/guides/inventory/) or [manage updates](/docs/guides/updates/).
+Next: [read client telemetry](/docs/guides/inventory/), [inspect installed software](/docs/guides/software-inventory/) or [manage updates](/docs/guides/updates/).
 
-[v0.1.2 client reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/client/CLIENT.md)
+[v0.1.3 client reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/client/CLIENT.md)

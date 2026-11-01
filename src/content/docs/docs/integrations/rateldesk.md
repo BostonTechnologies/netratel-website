@@ -58,6 +58,6 @@ Upgrade both products before moving from the previous pairing protocol. The forw
 
 Netclaw connections, unrelated API/MCP credentials and existing business history are separate from this pairing.
 
-[System pairing reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/rateldesk-pairing.md)
+[System pairing reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/rateldesk-pairing.md)
 
-[NetRatel request-definition contract](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/src/NetRatel/NetRatel.API/Endpoints/Internal/InternalEndpoints.Authoring.cs) · [RatelDesk request builder](https://github.com/BostonTechnologies/rateldesk/blob/487052fab83d8d81cb41ae5b073fd75ab61e42ae/src/HelpDesk.NewWeb/Components/Pages/Admin/Requests/RequestFormBuilder.razor)
+[NetRatel request-definition contract](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/src/NetRatel/NetRatel.API/Endpoints/Internal/InternalEndpoints.Authoring.cs) · [RatelDesk request builder](https://github.com/BostonTechnologies/rateldesk/blob/487052fab83d8d81cb41ae5b073fd75ab61e42ae/src/HelpDesk.NewWeb/Components/Pages/Admin/Requests/RequestFormBuilder.razor)

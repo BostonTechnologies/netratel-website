@@ -42,4 +42,4 @@ netratel services restart --tenant-id 7 --agent-id "$AGENT_ID" \
 
 After reviewing the response, repeat the same command with `--confirm`. Inspect `netratel services operation --tenant-id 7 --agent-id "$AGENT_ID" --operation-id "$OPERATION_ID"` for its outcome. Keep the same operation ID when checking that request.
 
-[v0.1.2 Services reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/operations/SERVICES.md) · [Service-control CLI](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/CLI_AND_MCP.md#service-investigation-and-control)
+[v0.1.3 Services reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/operations/SERVICES.md) · [Service-control CLI](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/CLI_AND_MCP.md#service-investigation-and-control)

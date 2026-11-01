@@ -48,4 +48,4 @@ Local and OIDC accounts remain separate identities, even when they share an emai
 
 Browser sign-in mode does not configure [HTTP MCP authentication](/docs/integrations/http-mcp/). MCP has its own endpoint, credentials and permissions.
 
-[Configuration reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/deployment/CONFIGURATION.md)
+[Configuration reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/deployment/CONFIGURATION.md)

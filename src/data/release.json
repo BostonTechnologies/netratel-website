@@ -1,98 +1,98 @@
 {
-  "tag": "v0.1.2",
-  "publishedAt": "2026-10-29T18:01:39Z",
-  "sourceCommit": "00c46d33fe6f2e60205df494169034459ed3b7e8",
-  "url": "https://github.com/BostonTechnologies/netratel/releases/tag/v0.1.2",
+  "tag": "v0.1.3",
+  "publishedAt": "2026-11-01T17:44:41Z",
+  "sourceCommit": "01a874fe30efbb86d5073d808c710220fdfde7ca",
+  "url": "https://github.com/BostonTechnologies/netratel/releases/tag/v0.1.3",
   "assets": [
     {
-      "name": "netratel-0.1.2.spdx.json",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-0.1.2.spdx.json",
+      "name": "netratel-0.1.3.spdx.json",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-0.1.3.spdx.json",
       "bytes": 177814,
-      "sha256": "sha256:bf95925fcf03e8f74c4f4fa573dd8c96c936260dcf95bb2c4503b8facb8b113a"
+      "sha256": "sha256:63f5c0b81c3e94471cf6298314bd3fbd1ed5cbde41faae0b09a146b7163e6e92"
     },
     {
-      "name": "netratel-cli-0.1.2-linux-x64.tar.gz",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-cli-0.1.2-linux-x64.tar.gz",
-      "bytes": 4352161,
-      "sha256": "sha256:0840187845d500ff9e62abbe76ba1a25a8a25f504ef22fe04482178c6339431a"
+      "name": "netratel-cli-0.1.3-linux-x64.tar.gz",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-cli-0.1.3-linux-x64.tar.gz",
+      "bytes": 4370381,
+      "sha256": "sha256:12afe1d44968fcc8e7a254404f282baaa6ccdcdb333823613e1935994028ebaf"
     },
     {
-      "name": "netratel-client-0.1.2-linux-x64.spdx.json",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-client-0.1.2-linux-x64.spdx.json",
+      "name": "netratel-client-0.1.3-linux-x64.spdx.json",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-client-0.1.3-linux-x64.spdx.json",
       "bytes": 74755,
-      "sha256": "sha256:9bafc683c399e73a2093ee58fa5e5a478cf20dd4748754377e1c565eb489539d"
+      "sha256": "sha256:2d5724f3fe16469246b433be25f72b123fe533cdbc8ee13fa43e66d43c409f3d"
     },
     {
-      "name": "netratel-client-0.1.2-linux-x64.tar.gz",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-client-0.1.2-linux-x64.tar.gz",
-      "bytes": 43367470,
-      "sha256": "sha256:837c89b050d794b3f4cf2063319fd4a027f6bbbc0bb830f64890779c17156157"
+      "name": "netratel-client-0.1.3-linux-x64.tar.gz",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-client-0.1.3-linux-x64.tar.gz",
+      "bytes": 43396710,
+      "sha256": "sha256:a25f05b5618c53c38f4489352700fa897fce642fa6e2fbad3aefa16d149edd56"
     },
     {
-      "name": "netratel-client-0.1.2-osx-arm64.spdx.json",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-client-0.1.2-osx-arm64.spdx.json",
+      "name": "netratel-client-0.1.3-osx-arm64.spdx.json",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-client-0.1.3-osx-arm64.spdx.json",
       "bytes": 73175,
-      "sha256": "sha256:fb43926adfc22c6a6be802542bcd32a46cb8794b285b0f88b24ee86681760b26"
+      "sha256": "sha256:3b6cc1efc8ff4de49beaa3b22e944a53a399fc2574847248e1212d2af1f6f5f8"
     },
     {
-      "name": "netratel-client-0.1.2-osx-arm64.tar.gz",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-client-0.1.2-osx-arm64.tar.gz",
-      "bytes": 41302884,
-      "sha256": "sha256:62d4f58d70ca62745139af60310545f92a043dc0ecc6404daec6f2136b468354"
+      "name": "netratel-client-0.1.3-osx-arm64.tar.gz",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-client-0.1.3-osx-arm64.tar.gz",
+      "bytes": 41333054,
+      "sha256": "sha256:faad6a36b6f1b147207044dfc4cd41a4170404036e4b7c1185048a88471a3914"
     },
     {
-      "name": "netratel-client-0.1.2-win-x64.spdx.json",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-client-0.1.2-win-x64.spdx.json",
+      "name": "netratel-client-0.1.3-win-x64.spdx.json",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-client-0.1.3-win-x64.spdx.json",
       "bytes": 75687,
-      "sha256": "sha256:49a939c81683e9685f6fa948a34e9cdfc62ec41a351527531951f9f2815cd324"
+      "sha256": "sha256:33b58e13fafd7ef21e322341ffdaa280bfdc2f6ba409d88b2c3760b4db758479"
     },
     {
-      "name": "netratel-client-0.1.2-win-x64.zip",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-client-0.1.2-win-x64.zip",
-      "bytes": 43672995,
-      "sha256": "sha256:2316a8526a426b045040341e4e2c2eb8be927cb1d4491842a64bffb1f18ca97f"
+      "name": "netratel-client-0.1.3-win-x64.zip",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-client-0.1.3-win-x64.zip",
+      "bytes": 43702757,
+      "sha256": "sha256:567beed2c1c7e3f945ab61dcb0f6aa02a72da17ba2a64e7af2b23005cfa78452"
     },
     {
-      "name": "netratel-compose-0.1.2.tar.gz",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-compose-0.1.2.tar.gz",
-      "bytes": 22066630,
-      "sha256": "sha256:f51c704019942e89955cdae8e27850aae4119675cf9969391d7ef7ce06b4b499"
+      "name": "netratel-compose-0.1.3.tar.gz",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-compose-0.1.3.tar.gz",
+      "bytes": 22078351,
+      "sha256": "sha256:7a9e8cb5013e269139f95e57c4e4c50a34677d9e62730e114052d50d7b4bf6c0"
     },
     {
-      "name": "netratel-mcp-stdio-0.1.2-linux-x64.tar.gz",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-mcp-stdio-0.1.2-linux-x64.tar.gz",
-      "bytes": 4087275,
-      "sha256": "sha256:8977e026faaf0ffca642984e24082c80ce328fdc6c080da8ec716a7cc78a5953"
+      "name": "netratel-mcp-stdio-0.1.3-linux-x64.tar.gz",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-mcp-stdio-0.1.3-linux-x64.tar.gz",
+      "bytes": 4109674,
+      "sha256": "sha256:dd3374c6fc7796522c25f61e294a73fdf393acd1f4a9c52aff16b080765d2ae3"
     },
     {
-      "name": "netratel-mcp-stdio-0.1.2-win-x64.spdx.json",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-mcp-stdio-0.1.2-win-x64.spdx.json",
+      "name": "netratel-mcp-stdio-0.1.3-win-x64.spdx.json",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-mcp-stdio-0.1.3-win-x64.spdx.json",
       "bytes": 124619,
-      "sha256": "sha256:b24b446fb2e30e7aa27c237782f5c6badc873a4487d2bc093d409a7ebae98bcf"
+      "sha256": "sha256:84a00144590c9a940df1f405e7c672e5dc8bc33294f7e77cf902c6d71e33013e"
     },
     {
-      "name": "netratel-mcp-stdio-0.1.2-win-x64.zip",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-mcp-stdio-0.1.2-win-x64.zip",
-      "bytes": 4335030,
-      "sha256": "sha256:a0aec003646668bc03c6fbd09e1331cfb3fdd3760ee160f28678d0f03619f5cb"
+      "name": "netratel-mcp-stdio-0.1.3-win-x64.zip",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-mcp-stdio-0.1.3-win-x64.zip",
+      "bytes": 4352965,
+      "sha256": "sha256:b3add18c12bb3e298dac9d138b0843ae91b2394a728d583f7d43009d295ba0ae"
     },
     {
-      "name": "NetRatel.Cli.0.1.2.nupkg",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/NetRatel.Cli.0.1.2.nupkg",
-      "bytes": 4554475,
-      "sha256": "sha256:d94ae3a13621b93987124a9f7682a7b908ed41a1d6535550c6f82d57cd5a55bb"
+      "name": "NetRatel.Cli.0.1.3.nupkg",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/NetRatel.Cli.0.1.3.nupkg",
+      "bytes": 4572405,
+      "sha256": "sha256:54a4a4265f5a4588492ded3eaaad4597dd22476fcb9874083f7a7a0539eac859"
     },
     {
       "name": "publication.json",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/publication.json",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/publication.json",
       "bytes": 8048,
-      "sha256": "sha256:a40a818e1ed88b59bc6f93145d2e3253771282899c5d202bfcb3f8c9ad52b73f"
+      "sha256": "sha256:0a75558f973107058f543acbf71708af84d175286b2ff67ab4095e9996484031"
     },
     {
       "name": "SHA256SUMS",
-      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/SHA256SUMS",
+      "url": "https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/SHA256SUMS",
       "bytes": 1415,
-      "sha256": "sha256:25a713576f31fb586e7a4136fe35836dcb3f33098fb191b1aaba8428c0412085"
+      "sha256": "sha256:29237a376200ad4239927d45f0f1377baa3a995ffcf2af9cc86db2b9283464ea"
     }
   ]
 }

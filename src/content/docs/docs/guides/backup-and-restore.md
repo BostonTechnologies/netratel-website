@@ -36,4 +36,4 @@ Verify that the instance reports **Ready**, the expected accounts and tenants ex
 
 An unexpected **Recovery** state usually means an existing database, bootstrap marker or key set is missing or inconsistent. Restore the matching state instead of repeating first-run setup.
 
-[v0.1.2 persistent-state reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/deployment/CONFIGURATION.md#required-persistent-state) · [Recovery behaviour](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/deployment/FIRST_RUN_SETUP.md)
+[v0.1.3 persistent-state reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/deployment/CONFIGURATION.md#required-persistent-state) · [Recovery behaviour](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/deployment/FIRST_RUN_SETUP.md)

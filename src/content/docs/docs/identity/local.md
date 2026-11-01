@@ -45,4 +45,4 @@ The same page lets you change your passphrase or manage an enrolled authenticato
 | Sign-in succeeds but a tenant is missing | Check the account's role assignment for that tenant. |
 | Setup code is missing | Inspect API startup and migration logs, then run `dotnet NetRatel.API.dll --setup-status` inside the API container. |
 
-For an established administrator account that cannot be recovered through normal sign-in, use the deployment-side [administrator recovery procedure](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/deployment/FIRST_RUN_SETUP.md#administrator-recovery-and-existing-oidc-identities). It recovers an existing administrator and requires access to the API deployment.
+For an established administrator account that cannot be recovered through normal sign-in, use the deployment-side [administrator recovery procedure](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/deployment/FIRST_RUN_SETUP.md#administrator-recovery-and-existing-oidc-identities). It recovers an existing administrator and requires access to the API deployment.

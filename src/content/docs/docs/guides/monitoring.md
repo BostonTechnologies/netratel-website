@@ -13,7 +13,7 @@ Monitoring evaluates client evidence and keeps each alert's history. A rule can 
 4. Set the threshold, breach hold, recovery threshold and recovery hold. For disk rules, choose the unit explicitly.
 5. Review the target selection, add a published flow if needed, and save with a reason.
 
-Memory remains available in telemetry, but is not a rule type in v0.1.2. Discovering a service in inventory does not automatically monitor it; select it in a service rule.
+Memory remains available in telemetry, but is not a rule type in v0.1.3. Discovering a service in inventory does not automatically monitor it; select it in a service rule.
 
 ## Understand alert state
 
@@ -36,8 +36,14 @@ This condition uses the rule's full target selection. One outage affecting sever
 
 ## Respond to an occurrence
 
+Expand **Alert details** below a row for target/rule, evidence/timing,
+automation/flow and incident/acknowledgement cards. **Flow run and receipt** and
+**Published flow** open the associated tenant-qualified records. **Open RatelDesk
+ticket** appears only when a validated incident receipt includes a safe link; a
+successful flow alone does not establish that a ticket was created.
+
 **Acknowledge** records that someone is handling it. **Clear** ends the current occurrence with an operator reason. A new occurrence needs fresh evidence and a new breach hold. Use a reasoned suppression with an expiry for planned maintenance; evaluation continues while outbound action is suppressed.
 
 Reading or deleting an item under **Notifications** does not acknowledge or resolve its monitoring occurrence.
 
-[v0.1.2 monitoring reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/operations/MONITORING.md)
+[v0.1.3 monitoring reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/operations/MONITORING.md)

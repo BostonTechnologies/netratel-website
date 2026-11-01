@@ -47,6 +47,7 @@ export default defineConfig({
       ] },
       { label: 'Operate your fleet', collapsed: true, items: [
         item('Manage clients', 'guides/clients'), item('Inventory & health', 'guides/inventory'),
+        item('Software inventory', 'guides/software-inventory'),
         item('Scripts', 'guides/scripts'), item('Jobs & schedules', 'guides/jobs'),
         item('Terminals & services', 'guides/terminal-and-services'), item('Files & logs', 'guides/files-and-logs'),
         item('Monitoring', 'guides/monitoring'), item('Alert flows', 'guides/flows'), item('Notifications', 'guides/notifications'),
@@ -58,6 +59,7 @@ export default defineConfig({
         item('Operator policies', 'integrations/operator-policies'), item('Netclaw & AI Ops', 'integrations/netclaw'), item('RatelDesk', 'integrations/rateldesk'),
       ] },
       { label: 'Reference & support', collapsed: true, items: [
+        item('Product specification', 'reference/product-specification'),
         item('Architecture', 'reference/architecture'), item('Command-line interface', 'reference/cli'),
         item('Configuration', 'reference/configuration'), item('Security model', 'reference/security'),
         item('Backup & restore', 'guides/backup-and-restore'), item('Troubleshooting', 'guides/troubleshooting'),

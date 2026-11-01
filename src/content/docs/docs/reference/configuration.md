@@ -44,4 +44,4 @@ An existing enrolled identity is stored separately from these endpoint settings.
 
 Use [Local](/docs/identity/local/), [OIDC](/docs/identity/oidc/) and [Hybrid](/docs/identity/hybrid/) for login configuration. Use [HTTP MCP](/docs/integrations/http-mcp/) for its separate ingress, outbound and delegation settings, and [stdio MCP](/docs/integrations/stdio/) for local MCP profiles.
 
-[Complete v0.1.2 deployment configuration](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/deployment/CONFIGURATION.md)
+[Complete v0.1.3 deployment configuration](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/deployment/CONFIGURATION.md)

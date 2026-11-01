@@ -17,7 +17,17 @@ Keep the existing persistent volumes and signing material. An upgraded installat
 
 ## Import a client pack
 
-Open **Agent Installers** at `/clients/mgmt`, then **GitHub releases**. Import the desired complete client pack. NetRatel verifies the publication record and checksums before activating the local pack.
+Open **Agent Installers & Updates** at `/clients/mgmt`, then **GitHub releases**. Import the desired complete client pack. NetRatel verifies the publication record and checksums before activating the local pack.
+
+Open **Local imports** to inspect downloaded packs, source checks and their
+approval, retry/cancel or cleanup state. This tab remains available independently
+of GitHub discovery. **Packages** holds the imported artifacts used for installer
+generation. Expand tenant eligibility or release-automation details when needed;
+the compact header keeps their attention indicators visible.
+
+The catalogue and management lists offer 20, 50 or 100 rows per page. The GitHub
+view reports upstream availability and scan limits rather than promising an
+unbounded catalogue.
 
 Importing makes the pack available for review. **Approve and publish for deployment** is the separate action that offers it through enabled tenant update policies.
 
@@ -25,7 +35,7 @@ Importing makes the pack available for review. **Approve and publish for deploym
 
 Review tenant channel settings, target-version pins and eligible clients before publication. Use a small initial cohort, confirm its running version and update result, then widen the rollout. Preserve each machine's installed identity and rollback material.
 
-The **update attempts** view shows rollout progress and failures. A downloaded package is not the same as an accepted running update; inspect the recorded outcome.
+The **Activity** view shows rollout progress and failures. **Suspended** lists paused updates. A downloaded package is not the same as an accepted running update; inspect the recorded outcome.
 
 ## Automate release checks
 
@@ -33,4 +43,4 @@ Instance-wide automation starts off. Administrators can enable 12-hour or 24-hou
 
 **Check now** schedules a check using the saved policy. Clients fetch approved updates from their NetRatel instance and do not need direct access to GitHub.
 
-[v0.1.2 upgrade guidance](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/deployment/SELF_HOSTING.md#6-restart-upgrade-and-troubleshoot) · [Client release import](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/client/CLIENT.md#release-import-and-instance-automation)
+[v0.1.3 upgrade guidance](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/deployment/SELF_HOSTING.md#6-restart-upgrade-and-troubleshoot) · [Client release import](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/client/CLIENT.md#release-import-and-instance-automation)

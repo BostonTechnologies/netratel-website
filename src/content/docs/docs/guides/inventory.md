@@ -27,10 +27,22 @@ Telemetry includes an observation age. Use it when interpreting a disconnected c
 
 Open **Services** for Windows services or Linux systemd units. Search by service name, then inspect state and collection age. **Refresh** requests a new collection; wait for its result before treating the displayed inventory as refreshed.
 
+## Inspect installed software
+
+Choose **Software Inventory** on a client card for its saved installed packages,
+collection progress and changes. **Estate Management → Software Inventory** adds
+tenant-wide software/version prevalence, installation filters, device coverage
+and CSV export. Updated Windows and Linux clients collect supported package
+metadata; macOS software inventory is unsupported.
+
+[Inspect installed software](/docs/guides/software-inventory/) explains scheduling,
+refresh, package detail cards and incomplete scans. Software snapshots, service
+collections and live telemetry have separate timestamps and collection paths.
+
 ## Turn observations into alerts
 
 [Monitoring rules](/docs/guides/monitoring/) evaluate CPU, disk free space and explicitly selected services. Memory is displayed as telemetry in this release, but is not a monitoring rule type. A rule can also raise a grouped alert when its selected clients go offline.
 
 For automated inspection, use the [CLI](/docs/reference/cli/) or [HTTP MCP](/docs/integrations/http-mcp/) with the tenant ID and registered agent ID returned by discovery. Display names are labels, not API target identifiers.
 
-[v0.1.2 client reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/client/CLIENT.md) · [Services reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/operations/SERVICES.md)
+[v0.1.3 client reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/client/CLIENT.md) · [Services reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/operations/SERVICES.md)

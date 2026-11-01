@@ -1,6 +1,6 @@
 ---
 title: Deploy your first instance
-description: Download the verified v0.1.2 Compose bundle, start NetRatel, and create your first administrator.
+description: Download the verified v0.1.3 Compose bundle, start NetRatel, and create your first administrator.
 ---
 
 Start a local-account installation with the published Docker images and bundled PostgreSQL. Run these commands in a **terminal on your Linux x64 Docker host**. Have Docker Compose v2, OpenSSL, `curl`, `tar` and `sha256sum` installed.
@@ -12,16 +12,16 @@ Use a new directory for the release downloads:
 ```bash
 mkdir netratel-downloads
 cd netratel-downloads
-curl -fLO https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-compose-0.1.2.tar.gz
-curl -fLO https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/SHA256SUMS
+curl -fLO https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-compose-0.1.3.tar.gz
+curl -fLO https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 ```
 
-The checksum result for `netratel-compose-0.1.2.tar.gz` must be `OK`. Then extract the bundle:
+The checksum result for `netratel-compose-0.1.3.tar.gz` must be `OK`. Then extract the bundle:
 
 ```bash
 mkdir ../netratel-instance
-tar -xzf netratel-compose-0.1.2.tar.gz -C ../netratel-instance
+tar -xzf netratel-compose-0.1.3.tar.gz -C ../netratel-instance
 cd ../netratel-instance
 umask 077
 cp .env.images.example .env

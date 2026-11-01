@@ -37,4 +37,4 @@ Expand filters to search text, severity and category. Sources that support them 
 
 Check the displayed stream state and any dropped-record or resynchronisation message before concluding a history is complete. Clearing displayed records only clears the view. For MCP investigations, discover available log sources first and retain the returned cursor when paging.
 
-[v0.1.2 file-operation reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/CLI_AND_MCP.md#folder-browsing-and-mutations) · [Log explorer](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/src/NetRatel/NetRatel.Web/Components/Dialogs/GatewayClientLogExplorerDialog.razor)
+[v0.1.3 file-operation reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/CLI_AND_MCP.md#folder-browsing-and-mutations) · [Log explorer](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/src/NetRatel/NetRatel.Web/Components/Dialogs/GatewayClientLogExplorerDialog.razor)
