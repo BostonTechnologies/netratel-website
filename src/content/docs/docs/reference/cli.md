@@ -3,15 +3,15 @@ title: Use the CLI
 description: Install the Linux CLI, connect a profile and inspect or operate a selected tenant.
 ---
 
-The NetRatel CLI provides structured commands for operators and automation. The v0.1.2 CLI archive targets Linux x64 and requires the .NET 10 runtime.
+The NetRatel CLI provides structured commands for operators and automation. The v0.1.3 CLI archive targets Linux x64 and requires the .NET 10 runtime.
 
 ## Install
 
-Download [netratel-cli-0.1.2-linux-x64.tar.gz](https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/netratel-cli-0.1.2-linux-x64.tar.gz) and [SHA256SUMS](https://github.com/BostonTechnologies/netratel/releases/download/v0.1.2/SHA256SUMS) into the same directory. From that directory:
+Download [netratel-cli-0.1.3-linux-x64.tar.gz](https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/netratel-cli-0.1.3-linux-x64.tar.gz) and [SHA256SUMS](https://github.com/BostonTechnologies/netratel/releases/download/v0.1.3/SHA256SUMS) into the same directory. From that directory:
 
 ```sh
 sha256sum --ignore-missing --check SHA256SUMS
-tar -xzf netratel-cli-0.1.2-linux-x64.tar.gz
+tar -xzf netratel-cli-0.1.3-linux-x64.tar.gz
 export PATH="$PWD/netratel-cli-linux-x64:$PATH"
 netratel --help
 ```
@@ -68,4 +68,4 @@ Mutations use review and confirmation. Some groups repeat the reviewed request w
 
 Use `netratel setup --transport cli --profile NAME` for another connection. `netratel profile list` lists saved profiles; `netratel profile select NAME` prints the explicit selection to use. CLI, stdio MCP and HTTP MCP profiles have separate namespaces.
 
-[v0.1.2 CLI reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/CLI_AND_MCP.md) · [Configuration keys](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/configuration.md)
+[v0.1.3 CLI reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/CLI_AND_MCP.md) · [Configuration keys](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/configuration.md)

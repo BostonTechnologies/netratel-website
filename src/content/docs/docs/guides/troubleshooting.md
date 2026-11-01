@@ -32,7 +32,7 @@ For the bundled database, PostgreSQL should be healthy, `migrations` and `volume
 
 Check its service, effective API/Gateway URLs, TLS trust and enrolment identity. The gateway needs HTTP/2 end to end through the public proxy, with the private upstream routed to the API's h2c gateway listener.
 
-A connection that drops at a repeatable interval may be hitting a proxy stream timeout. Compare the effective proxy settings with the [gateway deployment reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/client/CLIENT.md#sustained-traefik-gateway-streams).
+A connection that drops at a repeatable interval may be hitting a proxy stream timeout. Compare the effective proxy settings with the [gateway deployment reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/client/CLIENT.md#sustained-traefik-gateway-streams).
 
 ## A CLI or MCP connection fails
 
@@ -42,4 +42,4 @@ Run the selected tooling entry point's `config validate` and `doctor`. Check the
 
 Include the product version, component, operating system, expected result, observed result and steps to reproduce. Add the relevant task, run or operation ID and a small redacted log excerpt. Keep credentials, installation links and private configuration values out of the report.
 
-[Open a product issue](https://github.com/BostonTechnologies/netratel/issues) · [v0.1.2 troubleshooting reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/operations/TROUBLESHOOTING.md)
+[Open a product issue](https://github.com/BostonTechnologies/netratel/issues) · [v0.1.3 troubleshooting reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/operations/TROUBLESHOOTING.md)

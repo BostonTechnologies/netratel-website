@@ -1,6 +1,6 @@
 ---
 title: Requirements
-description: Check the supported server, client and operator-tool platforms for NetRatel v0.1.2.
+description: Check the supported server, client and operator-tool platforms for NetRatel v0.1.3.
 ---
 
 Run the server on a Linux x64 host with Docker Engine, Docker Compose v2 and persistent storage. Use the published Compose bundle for the first installation.
@@ -19,7 +19,7 @@ Run the server on a Linux x64 host with Docker Engine, Docker Compose v2 and per
 
 The external PostgreSQL overlay uses Compose's `!reset` syntax. If `docker compose config --quiet` rejects that tag, update the Compose v2 plugin before deploying it.
 
-There is no published minimum CPU or RAM sizing profile for v0.1.2. Size the host for the database, number of connected clients and workload you intend to run, and monitor it as you add clients.
+There is no published minimum CPU or RAM sizing profile for v0.1.3. Size the host for the database, number of connected clients and workload you intend to run, and monitor it as you add clients.
 
 The local evaluation binds Web to `127.0.0.1:8080`. For clients on other computers, provide a public HTTPS origin, a trusted certificate and an ingress that supports native HTTP/2 streams. The [included HTTPS overlay](/docs/deployment/public-https/) routes the Web console and native gateway on one hostname.
 
@@ -50,4 +50,4 @@ Choose [Local](/docs/identity/local/) for email and password, [OIDC](/docs/ident
 
 [Deploy your first instance](/docs/getting-started/quickstart/), or [compare deployment scenarios](/docs/deployment/overview/).
 
-Install Docker using the [official Docker Engine instructions](https://docs.docker.com/engine/install/) for your distribution. Download product assets from the [v0.1.2 release](https://github.com/BostonTechnologies/netratel/releases/tag/v0.1.2).
+Install Docker using the [official Docker Engine instructions](https://docs.docker.com/engine/install/) for your distribution. Download product assets from the [v0.1.3 release](https://github.com/BostonTechnologies/netratel/releases/tag/v0.1.3).

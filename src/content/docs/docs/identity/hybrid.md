@@ -53,4 +53,4 @@ If a local user exists but cannot sign in, check activation, password and enable
 
 HTTP MCP remains independently configured. Hybrid browser sign-in does not enable NetRatel credentials on the MCP endpoint; choose its [MCP authentication mode](/docs/integrations/http-mcp/) separately.
 
-[Configuration reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/deployment/CONFIGURATION.md#enable-local-login-on-an-existing-sso-instance)
+[Configuration reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/deployment/CONFIGURATION.md#enable-local-login-on-an-existing-sso-instance)

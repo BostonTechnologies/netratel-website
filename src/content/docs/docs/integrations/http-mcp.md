@@ -18,7 +18,7 @@ Local credential mode also needs the same canonical resource and delegation sett
 
 ## Prepare the deployment
 
-Use the matching v0.1.2 API, Web and MCP images from the verified release bundle. The bundle includes `compose.mcp-http.yaml` and `setup-http-mcp.sh`.
+Use the matching v0.1.3 API, Web and MCP images from the verified release bundle. The bundle includes `compose.mcp-http.yaml` and `setup-http-mcp.sh`.
 
 On a new MCP deployment, add the MCP overlay and routing to the saved stack through the manager that already owns it. Pull the matching MCP image. Keep all existing database, ingress and storage definitions. Set the canonical endpoint through `NETRATEL_MCP_PUBLIC_RESOURCE_URI` or the trusted public origin used by setup.
 
@@ -73,6 +73,12 @@ In an already prepared MCP container, `dotnet /app/NetRatel.Mcp.Http.dll setup` 
 
 ## Check the connection
 
+Once connected, `netratel_software` exposes saved software inventory, installations,
+prevalence, changes and tenant collection policy. Reads do not start a scan;
+refresh and policy changes use the existing preview and confirmation flow. See
+[software inventory](/docs/guides/software-inventory/#use-an-assistant-or-api) for
+scope, freshness and supported platforms.
+
 After the client initializes and lists tools, call `netratel_auth` with `{"operation":"status"}`. Then call an approved tenant read, such as `netratel_flows` with `{"operation":"list","request":{"tenantId":17}}`, replacing `17` with your tenant ID.
 
 | Result | Next check |
@@ -82,4 +88,4 @@ After the client initializes and lists tools, call `netratel_auth` with `{"opera
 | Authenticated, but tenant read denied | Owner permissions, tenant grant and matching operator policy. |
 | Service cannot reach the API | Host service identity, selected API URL, DNS and TLS. |
 
-[Detailed host settings](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/mcp-http/configuration.md) · [Host recovery and storage](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/mcp-http/hosting-reference.md)
+[Detailed host settings](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/mcp-http/configuration.md) · [Host recovery and storage](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/mcp-http/hosting-reference.md)

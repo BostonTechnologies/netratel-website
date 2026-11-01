@@ -33,4 +33,4 @@ Schedules belong to Jobs. [Monitoring flows](/docs/guides/flows/) are a separate
 
 Confirm that the target is available, your tenant permissions still allow the work, and the current script revision and input values are valid. If parameters fail to load, use **Retry parameters** before submitting. If a run exists, inspect that run before starting another execution.
 
-[v0.1.2 job workspace](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/src/NetRatel/NetRatel.Web/Components/Pages/Jobs/JobsPage.razor) · [Job editor](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/src/NetRatel/NetRatel.Web/Components/Pages/Jobs/JobEditDialog.razor)
+[v0.1.3 job workspace](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/src/NetRatel/NetRatel.Web/Components/Pages/Jobs/JobsPage.razor) · [Job editor](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/src/NetRatel/NetRatel.Web/Components/Pages/Jobs/JobEditDialog.razor)

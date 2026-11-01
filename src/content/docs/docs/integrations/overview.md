@@ -15,6 +15,11 @@ NetRatel exposes the same managed systems through several interfaces. Choose the
 
 The Web application and native clients work without the optional HTTP MCP service.
 
+For software queries, both HTTP and stdio expose the same `netratel_software`
+operations. Start with a permitted saved snapshot or installation read, then
+request a refresh only when needed. The [software inventory guide](/docs/guides/software-inventory/)
+explains the collection and authorisation boundaries.
+
 ## Start with a small connection
 
 For a new HTTP MCP client, a useful first connection has the server permission `mcp.discovery.read` and the tenant permission `flow.read`. Approve its corresponding read policy, connect, then list flows in that tenant. An empty list is a valid result.
@@ -40,4 +45,4 @@ Authentication tells you which connection is in use. [Credential grants](/docs/i
 
 For actions that return a preview, review it before confirming. After submission, follow the returned task or operation ID until it reports an outcome; a queued response means work has been accepted, not completed.
 
-[CLI and interface reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/CLI_AND_MCP.md)
+[CLI and interface reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/CLI_AND_MCP.md)

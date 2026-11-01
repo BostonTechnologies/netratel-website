@@ -43,4 +43,4 @@ Use a single API instance as the straightforward deployment baseline. Some live 
 
 Next: [configuration](/docs/reference/configuration/), [security and access](/docs/reference/security/) and [backup and restore](/docs/guides/backup-and-restore/).
 
-[v0.1.2 architecture reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/implementation/ARCHITECTURE.md)
+[v0.1.3 architecture reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/implementation/ARCHITECTURE.md)

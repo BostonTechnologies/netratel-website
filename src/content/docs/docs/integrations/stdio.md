@@ -12,10 +12,10 @@ Stdio MCP works with applications that launch a local process and communicate ov
 
 ## Install the tooling
 
-Install the .NET 10 runtime on the consumer's machine. Download the matching archive and `SHA256SUMS` from [v0.1.2](https://github.com/BostonTechnologies/netratel/releases/tag/v0.1.2):
+Install the .NET 10 runtime on the consumer's machine. Download the matching archive and `SHA256SUMS` from [v0.1.3](https://github.com/BostonTechnologies/netratel/releases/tag/v0.1.3):
 
-- Linux x64: `netratel-mcp-stdio-0.1.2-linux-x64.tar.gz`
-- Windows x64: `netratel-mcp-stdio-0.1.2-win-x64.zip`
+- Linux x64: `netratel-mcp-stdio-0.1.3-linux-x64.tar.gz`
+- Windows x64: `netratel-mcp-stdio-0.1.3-win-x64.zip`
 
 Verify the archive against its checksum, then extract it. The folders are named `netratel-mcp-linux-x64` and `netratel-mcp-win-x64`. Use the same operating-system account that runs your MCP consumer.
 
@@ -89,6 +89,6 @@ Setup is interactive; ordinary stdio startup is not. A consumer must launch the 
 
 If direct stdio rejects a credential, check that it has API purpose. If the bridge rejects one, check HTTP MCP purpose and the exact `/mcp` resource. These paths do not substitute credentials for each other.
 
-The Windows package also includes a protected launcher for existing DPAPI credentials. Use the [Windows migration procedure](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/http-mcp-bridge.md#retain-an-existing-windows-dpapi-credential) when retaining an encrypted credential from another launcher.
+The Windows package also includes a protected launcher for existing DPAPI credentials. Use the [Windows migration procedure](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/http-mcp-bridge.md#retain-an-existing-windows-dpapi-credential) when retaining an encrypted credential from another launcher.
 
-[Tooling configuration reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/integrations/configuration.md)
+[Tooling configuration reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/integrations/configuration.md)

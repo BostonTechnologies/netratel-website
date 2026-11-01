@@ -43,6 +43,11 @@ docker compose --env-file .env -f compose.images.yaml ps -a
 
 Continue to `up -d` only after migrations exit successfully. If migrations fail, inspect the error and leave API and Web stopped while resolving it.
 
+Upgrading from 0.1.3 introduces software-inventory tables and indexes through the
+normal migration service. Existing clients have no software snapshot until an
+updated Windows or Linux client connects and completes its first scan. Keep the
+migration on a binary rollback; removing it would delete inventory history.
+
 Sign in with an existing account. Confirm the expected tenant and clients, inspect service logs and perform a read-only inventory check. An upgrade should keep the existing owner and enrolled identities.
 
 ## 4. Update native clients

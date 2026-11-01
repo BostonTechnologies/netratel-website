@@ -42,4 +42,4 @@ An integration credential inherits a ceiling from its owner's current access. It
 
 [MCP operator policies](/docs/integrations/operator-policies/) add operation and target restrictions. An account role, credential grant and matching policy each have a separate job; adding a role does not automatically allow every MCP action.
 
-[Role and permission reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/operations/rbac.md)
+[Role and permission reference](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/operations/rbac.md)

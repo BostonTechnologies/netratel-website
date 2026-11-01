@@ -26,13 +26,13 @@ Deployment-provided addresses appear locked in the editor. Change their source i
 
 ## 2. Import the client pack
 
-An instance administrator opens **Agent Installers & Updates**, reviews the GitHub release and imports its client pack. Select **v0.1.2** for this guide.
+An instance administrator opens **Agent Installers & Updates**, reviews the GitHub release and imports its client pack. Select **v0.1.3** for this guide.
 
 Import checks the pack's artifacts before making them available locally. Importing a pack and publishing it for automatic updates are separate actions. You only need the appropriate verified artifact available to generate your first installer.
 
 ## 3. Generate the installer
 
-Open **Clients → Artifacts → Generate script**. Choose the tenant, runtime and available client version. Review the public addresses, installation options, expiry and enrollment-use limit, then generate the link.
+Open **Agent Installers & Updates → Packages → Generate script**. Choose the tenant, runtime and available client version. Review the public addresses, installation options, expiry and enrollment-use limit, then generate the link.
 
 The result lets you inspect the script, copy the installation command or download the script. Copy the actual command from your instance. It contains the protected link for this enrollment.
 

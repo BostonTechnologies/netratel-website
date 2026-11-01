@@ -38,4 +38,4 @@ The Data Protection key ring protects stored application material. The native-ag
 
 Use HTTPS for public origins and explicitly configure trusted reverse proxies. Browser sessions, API credentials and enrolled-client credentials remain separate paths through the system.
 
-[v0.1.2 access model](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/operations/rbac.md) · [Deployment configuration](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/deployment/CONFIGURATION.md)
+[v0.1.3 access model](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/operations/rbac.md) · [Deployment configuration](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/deployment/CONFIGURATION.md)

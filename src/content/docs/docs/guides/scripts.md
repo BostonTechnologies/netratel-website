@@ -31,6 +31,14 @@ Get-Service | Select-Object -First 10 Name, Status
 
 These examples read information; use a client with the matching interpreter.
 
+## Edit without losing your draft
+
+Click the script name above the editor to rename it. **Save** stores the name and
+content together. **Delete** sits beside Save and still requires confirmation.
+Use the full-screen editor when you need more room; moving between normal and
+full-screen views preserves unsaved changes. A failed save retains the draft so
+you can resolve the error before trying again.
+
 ## Run it
 
 1. Open **Orchestration → New Task** at `/tasks/new`.
@@ -43,6 +51,11 @@ These examples read information; use a client with the matching interpreter.
 
 Read the final task state, exit code and output. Submission means NetRatel accepted the request; the execution result establishes what happened on the computer.
 
+In **Task History**, expand a run for its target, tenant, timing, status and a
+scrolling console preview. Details load when expanded. The preview is bounded to
+60 lines and 12,288 characters; **Full output** opens the complete task view.
+Refresh the preview for a later result, or use the full view for live logs.
+
 Scripts run under the native client's account. PowerShell requires an installed interpreter: `Auto` prefers `pwsh`, with Windows PowerShell as a Windows fallback. Linux and macOS PowerShell scripts require `pwsh`. NetRatel reports an unavailable interpreter as a task failure without stopping the client.
 
-[v0.1.2 task interface](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/src/NetRatel/NetRatel.Web/Components/Pages/Tasks/NewTask.razor) · [Interpreter behaviour](https://github.com/BostonTechnologies/netratel/blob/v0.1.2/docs/client/CLIENT.md#script-interpreters)
+[v0.1.3 task interface](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/src/NetRatel/NetRatel.Web/Components/Pages/Tasks/NewTask.razor) · [Interpreter behaviour](https://github.com/BostonTechnologies/netratel/blob/v0.1.3/docs/client/CLIENT.md#script-interpreters)
