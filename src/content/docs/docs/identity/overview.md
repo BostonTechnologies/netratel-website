@@ -13,6 +13,8 @@ NetRatel can manage accounts itself, use your identity provider, or offer both. 
 
 All three use NetRatel's tenant and role assignments to control access. Signing in and receiving permission to operate a tenant are separate steps.
 
+The [role catalog](/docs/identity/users-and-tenants/#choose-a-role) applies to Local and OIDC identities. For an external provider such as Authentik, configure [who may sign in and how application access is assigned](/docs/identity/oidc/#choose-who-can-sign-in-and-what-they-can-do). A provider group or an email address alone is not an application role assignment.
+
 ## Set the mode
 
 In the supplied Compose bundle, set one value in the deployment's `.env`:

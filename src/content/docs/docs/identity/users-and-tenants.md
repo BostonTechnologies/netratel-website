@@ -14,7 +14,7 @@ A tenant groups the systems an operator is allowed to manage. Assign a role and 
 5. Select the local user, choose a role and select **Add**.
 6. Confirm the saved role and scope in **Assignments**. Ask the operator to open a permitted tenant and read its clients.
 
-The access page lists local accounts. OIDC accounts have durable principal IDs too, but their assignments currently use the authenticated `/api/v2/access` administration API. Matching an email address does not identify or link an OIDC account; its issuer and subject do.
+The v0.1.3 access page lists local accounts. OIDC accounts have durable principal IDs too, but their assignments currently use the authenticated `/api/v2/access` administration API. Follow [Assign application roles to an OIDC user](/docs/identity/oidc/#assign-application-roles-to-an-oidc-user) for the exact requests and readback. Matching an email address does not identify or link an OIDC account; its issuer and subject do.
 
 ## Choose a role
 
@@ -24,6 +24,9 @@ The built-in catalog includes:
 | --- | --- |
 | `Observer` | People who need visibility into systems. |
 | `Operator` | People carrying out operational work. |
+| `MonitoringReader` | People reading monitoring rules and alert episodes. |
+| `MonitoringManager` | People managing monitoring definitions and target selection. |
+| `MonitoringResponder` | People acknowledging, clearing or silencing monitoring occurrences. |
 | `ScriptEditor` | People maintaining the script library. |
 | `IntegrationAdministrator` | People configuring integrations. |
 | `Publisher` | People publishing artifacts. |
@@ -31,6 +34,10 @@ The built-in catalog includes:
 | `InstanceAdministrator` | Administration across the installation. |
 
 Inspect the role's actual permissions before assigning it. Existing and custom roles are preserved during upgrades; their name alone does not describe every permission currently saved in your installation.
+
+These are NetRatel application roles, not Authentik roles or automatically recognized provider-group names. An Authentik application binding controls sign-in; [OIDC configuration](/docs/identity/oidc/#choose-who-can-sign-in-and-what-they-can-do) explains provider claims, explicit application assignments and separate test/production setup.
+
+Assign `InstanceAdministrator` at **Instance-wide** scope for installation administration. `Operator` is an operational role within its assigned scope. The `IntegrationAdministrator` role includes `mcp.policy.admin` as well as integration management; it does not grant every installation permission. Verify the [MCP Policies access check](/docs/identity/oidc/#mcp-policies-returns-403-despite-administrator-access) when using v0.1.3 with OIDC.
 
 Custom roles use the same permission catalog. The person creating or assigning access can only delegate authority they hold in that scope. NetRatel prevents removal of the last instance administrator.
 

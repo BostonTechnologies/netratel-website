@@ -11,6 +11,8 @@ New HTTP credentials created through the [browser wizard](/docs/integrations/cre
 
 Open **Admin → MCP Policies** at `/admin/operator-policies`. Your account needs current `mcp.policy.admin` authority. An interactive instance administrator can manage policies without an existing delegated MCP parent policy. Scoped callers still need administration authority within their existing environment, target and operation bounds. Exact previews, confirmations and audit records apply to both paths.
 
+For OIDC sign-in on v0.1.3, an additional route scope check can return HTTP 403 even when the account reports instance-administrator access. See [the OIDC access check and tracked correction](/docs/identity/oidc/#mcp-policies-returns-403-despite-administrator-access). This browser-session problem is separate from the bounds on a connected MCP credential.
+
 The default list shows active base policies, grouped by integration and tenant. Expand a base to see its child exceptions. Search by policy, principal, tenant, client, tag or operation; use **Lifecycle** to include inactive history.
 
 Choose **Inspect** to open the policy dialog. It shows the selected identity, target, operations, path grants, limits, expiry and audit history. Filters and pagination remain in place when you close it.
