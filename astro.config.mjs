@@ -43,7 +43,14 @@ export default defineConfig({
       ] },
       { label: 'Identity & access', collapsed: true, items: [
         item('Choose a sign-in method', 'identity/overview'), item('Local accounts', 'identity/local'),
-        item('OpenID Connect', 'identity/oidc'), item('Hybrid sign-in', 'identity/hybrid'), item('Users & tenants', 'identity/users-and-tenants'),
+        item('OpenID Connect', 'identity/oidc'),
+        { label: 'OIDC provider setup', collapsed: true, items: [
+          item('Choose a provider guide', 'identity/oidc/providers'),
+          item('Authentik', 'identity/oidc/providers/authentik'),
+          item('Microsoft Entra ID / Azure', 'identity/oidc/providers/entra-id'),
+          item('Other OIDC providers', 'identity/oidc/providers/other-providers'),
+        ] },
+        item('Hybrid sign-in', 'identity/hybrid'), item('Users & tenants', 'identity/users-and-tenants'),
       ] },
       { label: 'Operate your fleet', collapsed: true, items: [
         item('Manage clients', 'guides/clients'), item('Inventory & health', 'guides/inventory'),

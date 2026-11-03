@@ -1,11 +1,13 @@
 ---
 title: OpenID Connect
-description: Configure OIDC sign-in, understand application roles, and verify Authentik access separately for test and production.
+description: Configure provider-neutral OIDC sign-in, assign NetRatel roles and verify access.
 ---
 
 Use OpenID Connect when your organization already manages operator identities through an identity provider. NetRatel uses an authorization-code flow with PKCE for browser sign-in and validates API access tokens separately.
 
 Start from a working NetRatel installation with a canonical HTTPS Web address and access to your identity provider's application settings.
+
+Use the [provider setup guides](/docs/identity/oidc/providers/) for the identity provider's application registration, group claims and role configuration. This page covers the settings and access checks shared by every provider.
 
 ## Choose who can sign in and what they can do
 
@@ -14,7 +16,7 @@ Configure two things separately:
 1. **Sign-in access in the provider:** who may use this NetRatel application's OIDC login.
 2. **Application access in NetRatel:** the person's role and its instance or tenant scope.
 
-An Authentik application policy binding allows sign-in. It does not, by itself, assign a NetRatel role. Creating a provider group named `InstanceAdministrator` or sending arbitrary role names does not automatically create application assignments.
+An identity provider's application-access policy allows sign-in. It does not, by itself, assign a NetRatel role. Creating a provider group named `InstanceAdministrator` or sending arbitrary role names does not automatically create application assignments.
 
 The [role catalog](/docs/identity/users-and-tenants/#choose-a-role) includes `InstanceAdministrator`, `TenantAdministrator`, `Operator`, `Observer`, `ScriptEditor`, `IntegrationAdministrator`, `Publisher`, `MonitoringReader`, `MonitoringManager` and `MonitoringResponder`. These are application roles for Local and OIDC identities. Hybrid offers both sign-in methods; it does not copy assignments between them.
 
@@ -48,7 +50,7 @@ OIDC_TOKEN_ENDPOINT=https://identity.example.com/your-token-endpoint
 OIDC_ADMIN_GROUP_ID=your-dedicated-instance-admin-group-value
 ```
 
-Supply `OIDC_CLIENT_SECRET` through the deployment's secret mechanism. Copy the authority and token endpoint from the provider's discovery metadata. The token endpoint setting is needed when your provider does not use the default Azure-compatible refresh-token path.
+Supply `OIDC_CLIENT_SECRET` through the deployment's secret mechanism. Copy the authority and token endpoint from the provider's discovery metadata. Set the explicit token endpoint so token refresh uses the provider's actual endpoint.
 
 The bundle maps these values to API and Web. In a custom stack, use the complete container environment keys:
 
@@ -68,44 +70,15 @@ Recreate API and Web using your complete deployment command. For the basic image
 docker compose --env-file .env -f compose.images.yaml up -d --force-recreate api web
 ```
 
-## Configure Authentik for test and production
+## Keep test and production separate
 
-Use a separate application and OAuth2/OpenID Connect provider for each NetRatel installation. Keep each provider's client secret, callbacks, issuer and API audience with its own deployment.
+Register separate clients and application-access rules for each installation. Keep callback URLs, secrets, API audiences and administrator groups with their intended environment. Use a separate issuer where the provider supports one per application; otherwise enforce the separate audience and application assignment.
 
-The names below are examples, not built-in groups or automatic mapping rules:
-
-| Environment | Application/provider | Sign-in group | Dedicated administrator group |
-| --- | --- | --- | --- |
-| Test | `netratel-test` | `netratel-test-access` | `netratel-test-instance-admins` |
-| Production | `netratel-prod` | `netratel-prod-access` | `netratel-prod-instance-admins` |
-
-In the Authentik admin interface:
-
-1. Under **Directory → Groups**, create the access and administrator groups for the intended environment. Add each person only to the groups they need. A NetRatel administrator does not need Authentik superuser privileges.
-2. Under **Applications → Providers**, create or open that environment's OAuth2/OpenID Connect provider. Use a confidential client and register the exact Web callback and sign-out callback from the table above.
-3. Associate the provider with the matching application under **Applications → Applications**. In its **Policy / Group / User Bindings**, allow the environment's access group to use the application. Put administrators in that access group too; the administrator group has a separate job.
-4. Configure a scope mapping on that provider to emit the intended group values in the **API access token**. The mapping must apply to the API scope requested by NetRatel's Web service. A group visible in Authentik or only in an ID token is not enough for an API permission check.
-5. Set `OIDC_ADMIN_GROUP_ID` to the exact emitted administrator-group value for that installation. If the mapping emits group names, use the name; if it emits IDs, use that ID. Do not assume that a display name and a UUID are interchangeable.
-6. Set the Web client ID, requested API scope and secret from this provider. Set the API authority/audience to match the validated token's issuer and audience. Obtain discovery values from this provider; do not infer the API audience from a group name or scope name.
-7. Apply the deployment settings, then sign out and sign in again. Verify the resulting access as described below before repeating the setup for production.
-
-For a custom Authentik scope mapping, this expression emits only membership in the example test administrator group:
-
-```python
-admin_group = "netratel-test-instance-admins"
-return {
-    "groups": [group.name for group in request.user.groups.all()
-               if group.name == admin_group]
-}
-```
-
-Attach it to the test provider and the API scope that provider actually issues. Use a separate production mapping with its own group value. This expression emits a claim; it does not assign the ten application roles. Check its output using Authentik's mapping test and confirm the signed access token is issued for the intended API. Keep token contents and secrets out of screenshots and tickets.
-
-Existing `netratel-mcp-*` groups may control a separate MCP consumer/provider. Their membership does not automatically grant browser roles or change the token issued by the browser provider. Configure [HTTP MCP](/docs/integrations/http-mcp/) separately.
+A browser-access group and an MCP-consumer group have different purposes. Membership in one does not automatically grant access through the other. Configure [HTTP MCP](/docs/integrations/http-mcp/) separately.
 
 ## Assign application roles to an OIDC user
 
-In v0.1.3, **Admin → Access** lists local accounts. OIDC users have durable application principal IDs, but their role assignments use the authenticated access-administration API. Configurable per-role provider mappings and a complete OIDC browser editor are tracked in [NetRatel #478](https://github.com/BostonTechnologies/netratel/issues/478); they are not available just by creating similarly named Authentik groups.
+In v0.1.3, **Admin → Access** lists local accounts. OIDC users have durable application principal IDs, but their role assignments use the authenticated access-administration API. Configurable per-role provider mappings and a complete OIDC browser editor are tracked in [NetRatel #478](https://github.com/BostonTechnologies/netratel/issues/478); creating similarly named provider groups alone does not enable them.
 
 An authorized administrator can use the existing API as follows. Run these requests against the **API origin**, with an API client authenticated for that installation. Browser cookies alone are not API bearer credentials.
 

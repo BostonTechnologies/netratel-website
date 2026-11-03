@@ -35,7 +35,7 @@ The built-in catalog includes:
 
 Inspect the role's actual permissions before assigning it. Existing and custom roles are preserved during upgrades; their name alone does not describe every permission currently saved in your installation.
 
-These are NetRatel application roles, not Authentik roles or automatically recognized provider-group names. An Authentik application binding controls sign-in; [OIDC configuration](/docs/identity/oidc/#choose-who-can-sign-in-and-what-they-can-do) explains provider claims, explicit application assignments and separate test/production setup.
+These are NetRatel application roles, not automatically recognized identity-provider roles or group names. A provider's application-access policy controls sign-in; [OIDC configuration](/docs/identity/oidc/#choose-who-can-sign-in-and-what-they-can-do) explains claims and explicit application assignments. Follow the [provider setup guides](/docs/identity/oidc/providers/) for the provider's group and role controls.
 
 Assign `InstanceAdministrator` at **Instance-wide** scope for installation administration. `Operator` is an operational role within its assigned scope. The `IntegrationAdministrator` role includes `mcp.policy.admin` as well as integration management; it does not grant every installation permission. Verify the [MCP Policies access check](/docs/identity/oidc/#mcp-policies-returns-403-despite-administrator-access) when using v0.1.3 with OIDC.
 
